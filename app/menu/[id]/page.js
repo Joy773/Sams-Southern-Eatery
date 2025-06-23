@@ -25,7 +25,7 @@ export default function ProductDetail({ params }) {
       id: product._id,
       name: product.name,
       price: product.price,
-      image: product.image[0],
+      image: product.images[0]
     }))
   }
   const [selections, setSelections] = useState ({
@@ -139,7 +139,7 @@ export default function ProductDetail({ params }) {
         </div>
 
         <div>
-          <h1 className={`text-black text-center mt-2 text-[30px] ${italianno.className}`}>" Home Style Southern Cooking "</h1>
+          <h1 className={`text-black text-center mt-2 text-[30px] ${italianno.className}`}>Home Style Southern Cooking</h1>
         </div>
 
         <footer className="text-gray-800 py-10">
@@ -148,7 +148,7 @@ export default function ProductDetail({ params }) {
             <div>
               <h3 className="text-xl font-semibold mb-4">Our Menus</h3>
               <ul className="space-y-2 text-sm ">
-                <Link href='/'><li>Po'Boys & Burgers</li></Link>
+                <Link href='/'><li>PoBoys & Burgers</li></Link>
                 <Link href='/'><li>Salads</li></Link>
                 <Link href='/'><li>Seafood</li></Link>
                 <Link href='/'><li>Chicken</li></Link>
