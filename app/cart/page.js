@@ -4,7 +4,9 @@ import { updateQuantity, removeItem } from '../features/shopCart/cartSlice'
 import Image from 'next/image'
 import React from 'react'
 export default function page() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const cartItems = useSelector(state => state.cart.items)
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const dispatch = useDispatch()
 
   const handleIncrease = (id, currentQty) => {

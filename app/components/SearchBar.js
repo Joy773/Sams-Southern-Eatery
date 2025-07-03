@@ -3,6 +3,7 @@ import React from 'react'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function SearchBar() {
 
@@ -49,7 +50,7 @@ export default function SearchBar() {
   {filteredProducts.map(item => (
     <Link key={item._id} href={`/menu/${item._id}`}>
     <div className="border rounded-md p-4 shadow-md">
-      <img
+      <Image
         src={`https://api.sams-eatery.com/api/alluploads/${item.images[0]}`}
         alt={item.name}
         className="w-full h-48 object-cover rounded-md"
