@@ -42,7 +42,15 @@ export default function Navbar() {
     <section className='w-full bg-white p-5'>
       <div className='flex justify-center'>
         <Link href='/'>
-          <Image src="/sams.jpeg" width={160} height={59} alt="sams-logo" />
+          <div className="bg-white p-2 rounded-md">
+            <Image 
+              src="/sams.jpeg" 
+              width={160} 
+              height={59} 
+              alt="sams-logo" 
+              className="bg-white rounded-md"
+            />
+          </div>
         </Link>
       </div>
       <div className='flex justify-center p-5'>

@@ -49,14 +49,16 @@ export default function SearchBar() {
         <div className="mx-5 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
   {filteredProducts.map(item => (
     <Link key={item._id} href={`/menu/${item._id}`}>
-    <div className="border rounded-md p-4 shadow-md">
+    <div className="border rounded-md p-4 shadow-md overflow-hidden">
       <Image
         src={`https://api.sams-eatery.com/api/alluploads/${item.images[0]}`}
         alt={item.name}
+        height={500}
+        width={300}
         className="w-full h-48 object-cover rounded-md"
       />
-      <h2 className="text-lg font-bold mt-2 text-zinc-800">{item.name}</h2>
-      <p className="text-sm text-gray-600 mt-1">{item.description}</p>
+      <h2 className="text-lg font-bold mt-2 text-zinc-800 truncate w-full">{item.name}</h2>
+      <p className="text-sm text-gray-600 mt-1 break-words line-clamp-2">{item.description}</p>
       <p className="text-md font-semibold mt-2 text-zinc-800">${item.price}</p>
       <button className="mt-3 bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
         Order Now
